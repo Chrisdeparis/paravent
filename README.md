@@ -1,5 +1,5 @@
 # paravent
 
-Lancer le serveur php
-php -S localhost:8080
+Lancer le serveur à la racine du dossier avec la commande:
+- php -S localhost:8080
 
