@@ -26,9 +26,9 @@
 
 $tableau = [30, 27, 17, 42, 29, 12, 14, 41, 42, 42];
 
-function sortie($tableau){
+function sortie($tableau, $n){
     $count=0;
-    $n= 10;
+    
     
     $max = current($tableau);
 
@@ -41,7 +41,7 @@ function sortie($tableau){
     }
     return $count;    
 }
-print("La sortie = ".sortie($tableau));
+print("La sortie = ".sortie($tableau,10));
 
 
 
