@@ -17,7 +17,7 @@ $test = explode(' ', $test);
 function sortie($tableau, $n){
     $count=0;   
     
-    $max = current($tableau) +1;
+    $max = current($tableau);
 
     for($i=0; $i<$n; $i++){
         if($max > $tableau[$i]){
