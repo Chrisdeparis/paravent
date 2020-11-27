@@ -9,3 +9,5 @@ Le script attends 2 paramètres
 
 ## Le résultat 
 Le resultat correspond à la surface d'abri disponible
+
+- En cas d'erreur le message "saisie incorrecte" apparait.
