@@ -17,14 +17,14 @@ $test = explode(' ', $test);
 function sortie($tableau, $n){
     $count=0;   
     
-    $max = current($tableau);
+    $max = current($tableau) +1;
 
     for($i=0; $i<$n; $i++){
-        if($max > next($tableau)){
+        if($max > $tableau[$i]){
             $count++;
             
         } else {
-            current($tableau) == $max; 
+            
                       
         }
     }
