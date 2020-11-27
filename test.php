@@ -25,10 +25,10 @@ function sortie($tableau, $n){
             
         } else {
             
-                      
+          $val = count(array($tableau[$i]))                            
         }
     }
-    return $count;    
+    return $count + $val;    
 }
 /**
  * Vérifie que la largeur du continent correspond aux altitutes
