@@ -25,7 +25,7 @@ function sortie($tableau, $n){
             
         } else {
             
-          $val = count(array($tableau[$i]))                            
+          $val = count(array($tableau[$i]));                            
         }
     }
     return $count + $val;    
