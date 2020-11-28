@@ -19,7 +19,7 @@ function sortie($tableau, $n){
     
     $max = current($tableau);
 
-    for($i=0; $i<$n; $i++){
+    for($i=1; $i<$n; $i++){
         if($max > $tableau[$i]){
             $count++;
             
