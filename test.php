@@ -17,19 +17,20 @@ $test = explode(' ', $test);
 function sortie($tableau, $n){
     $count=0;   
     
-    $max = current($tableau);
-
+    $premier = current($tableau);
+    $max = max($tableau);
+    
     for($i=1; $i<$n; $i++){
-        if($max > $tableau[$i]){
+        if($premier > $tableau[$i] or $max > $tableau[$i]){
             $count++;
-            
-        } else {
-            
-          $val = count(array($tableau[$i]));                            
-        }
+        }  
     }
-    return $count + $val;    
+    return $count; 
+    
 }
+
+
+
 /**
  * Vérifie que la largeur du continent correspond aux altitutes
  */
@@ -43,7 +44,9 @@ function estValide($test, $n){
     }
     return $result;
 }
-
+/**
+ * Verifie que les contraintes sont respectées
+ */
 function contrainteOk($test, $n){
     $result = false;
     if($n > 0 and $n < 100001){
