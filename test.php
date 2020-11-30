@@ -16,8 +16,6 @@ $test = explode(' ', $test);
  */
 function sortie($tableau, $n){
     $count=0;   
-    
-    $premier = current($tableau);
     $valeurMax = [];
     $abri = [];
     $max=0;
