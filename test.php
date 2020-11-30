@@ -18,14 +18,35 @@ function sortie($tableau, $n){
     $count=0;   
     
     $premier = current($tableau);
-    $max = max($tableau);
-    
-    for($i=1; $i<$n; $i++){
-        if($premier > $tableau[$i] or $max > $tableau[$i]){
-            $count++;
-        }  
+    $valeurMax = [];
+    $abri = [];
+    $max=0;
+
+    // parcours du tableau des altitudes
+    for($i=0; $i<$n; $i++){
+        // si altitude > altitude max
+        if($tableau[$i] > $max){
+            $max = $tableau[$i];
+
+            array_push($valeurMax, $tableau[$i]);
+
+        }
+        // met en abri une altitude max deja rencontrée
+        if($tableau[$i] < $max and in_array($tableau[$i], $valeurMax)){
+            array_push($abri, $tableau[$i]);
+
+        }
+        
     }
-    return $count; 
+    // parcours le tableau si chaque valeur est une valeur max
+    foreach($tableau as $val){
+        // recupérer les abris
+        if(!in_array($val, $valeurMax)){
+            array_push($abri, $val);
+        }
+    }
+
+    return sizeof($abri); 
     
 }
 
